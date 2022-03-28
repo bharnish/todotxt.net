@@ -56,6 +56,7 @@
         <RoutedUICommand x:Key="SortByCompleted" Text="Sort By Completed" />
         <RoutedUICommand x:Key="SortByContext" Text="Sort By Context" />
         <RoutedUICommand x:Key="SortByDueDate" Text="Sort By Due Date" />
+        <RoutedUICommand x:Key="SortByThresholdDate" Text="Sort By Threshold Date" />
         <RoutedUICommand x:Key="SortByCreatedDate" Text="Sort By Created Date" />
         <RoutedUICommand x:Key="SortByPriority" Text="Sort By Priority" />
         <RoutedUICommand x:Key="SortByProject" Text="Sort By Priority" />
@@ -151,6 +152,7 @@
         <CommandBinding Command="{StaticResource SortByCompleted}" CanExecute="WhenTasksLoadedCanExecute" Executed="SortByCompletedExecuted"/>
         <CommandBinding Command="{StaticResource SortByContext}" CanExecute="WhenTasksLoadedCanExecute" Executed="SortByContextExecuted"/>
         <CommandBinding Command="{StaticResource SortByDueDate}" CanExecute="WhenTasksLoadedCanExecute" Executed="SortByDueDateExecuted"/>
+        <CommandBinding Command="{StaticResource SortByThresholdDate}" CanExecute="WhenTasksLoadedCanExecute" Executed="SortByThresholdDateExecuted"/>
         <CommandBinding Command="{StaticResource SortByCreatedDate}" CanExecute="WhenTasksLoadedCanExecute" Executed="SortByCreatedDateExecuted"/>
         <CommandBinding Command="{StaticResource SortByPriority}" CanExecute="WhenTasksLoadedCanExecute" Executed="SortByPriorityExecuted"/>
         <CommandBinding Command="{StaticResource SortByProject}" CanExecute="WhenTasksLoadedCanExecute" Executed="SortByProjectExecuted"/>
@@ -198,6 +200,8 @@
         <KeyBinding Command="{StaticResource SortByContext}" Key="NumPad3" Modifiers="Control"/>
         <KeyBinding Command="{StaticResource SortByDueDate}" Key="D4" Modifiers="Control"/>
         <KeyBinding Command="{StaticResource SortByDueDate}" Key="NumPad4" Modifiers="Control"/>
+        <KeyBinding Command="{StaticResource SortByThresholdDate}" Key="D8" Modifiers="Control"/>
+        <KeyBinding Command="{StaticResource SortByThresholdDate}" Key="NumPad8" Modifiers="Control"/>
         <KeyBinding Command="{StaticResource SortByCreatedDate}" Key="D5" Modifiers="Control"/>
         <KeyBinding Command="{StaticResource SortByCreatedDate}" Key="NumPad5" Modifiers="Control"/>
         <KeyBinding Command="{StaticResource SortByPriority}" Key="D6" Modifiers="Control"/>
@@ -268,6 +272,7 @@
                 <MenuItem Header="C_reation Date" IsCheckable="True" Command="{StaticResource SortByCreatedDate}" InputGestureText="Ctrl+5" Tag="CreatedDate"/>
                 <MenuItem Header="_Priority" IsCheckable="True" Command="{StaticResource SortByPriority}" InputGestureText="Ctrl+6" Tag="Priority"/>
                 <MenuItem Header="Pro_ject" IsCheckable="True" Command="{StaticResource SortByProject}" InputGestureText="Ctrl+7" Tag="Project"/>
+                <MenuItem Header="T_hreshold Date" IsCheckable="True" Command="{StaticResource SortByThresholdDate}" InputGestureText="Ctrl+8" Tag="ThresholdDate"/>
             </MenuItem>
             <MenuItem Header="Filter" Name="filterMenu">
                 <MenuItem Header="Hide future tasks" Command="{StaticResource ApplyFilterFutureTasks}" InputGestureText="Ctrl+T" IsCheckable="True" Tag="FutureTasks" FontWeight="Normal" />
